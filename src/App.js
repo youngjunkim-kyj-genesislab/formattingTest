@@ -13,6 +13,9 @@ function App() {
     for (let i = 0; i < 10; i++) {
       console.log(i);
     }
+    console.log('커밋되나 테스트');
+    const te = '?';
+    const YJBRANCH = '영준브랜치';
     return list.map((item, idx) => <div>{item}</div>);
   };
 
