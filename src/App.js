@@ -19,6 +19,8 @@ function App() {
     return list.map((item, idx) => <div>{item}</div>);
   };
 
+  const test2 = '111';
+
   return (
     <div className='App'>
       <header className='App-header'>
