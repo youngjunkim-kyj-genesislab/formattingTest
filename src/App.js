@@ -7,6 +7,15 @@ function App() {
     console.log('????????TEST');
     return '수정바랍니다.';
   };
+
+  const list = [1, 2, 3, 4, 5];
+  const foo = () => {
+    for (let i = 0; i < 10; i++) {
+      console.log(i);
+    }
+    return list.map((item, idx) => <div>{item}</div>);
+  };
+
   return (
     <div className='App'>
       <header className='App-header'>
