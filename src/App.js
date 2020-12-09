@@ -5,7 +5,7 @@ import MaterialTest from './pages/MaterialTest';
 import AnimationTest from './pages/AnimationTest';
 
 function App() {
-  console.log('??');
+  // console.log('??');
   return (
     <div className='App'>
       {/* <Todo /> */}

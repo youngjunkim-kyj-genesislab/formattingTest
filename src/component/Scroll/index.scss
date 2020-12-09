@@ -1,0 +1,90 @@
+.scroll-container {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  .part-img {
+    // opacity: 1;
+    // width: 100%;
+    // height: 830px;
+    width: 30%;
+    height: 500px;
+    margin: 0 auto;
+    background-size: cover;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    transition: all 0.5s ease-in-out;
+    &.level0 {
+      opacity: 0.1;
+    }
+    &.level1 {
+      opacity: 0.2;
+    }
+    &.level2 {
+      opacity: 0.3;
+    }
+    &.level3 {
+      opacity: 0.4;
+    }
+    &.level4 {
+      opacity: 0.5;
+    }
+    &.level5 {
+      opacity: 0.6;
+    }
+    &.level6 {
+      opacity: 0.7;
+    }
+    &.level7 {
+      opacity: 0.8;
+    }
+    &.level8 {
+      opacity: 0.9;
+    }
+    &.level9 {
+      opacity: 1;
+    }
+    &.level10 {
+      width: 31%;
+      height: 510px;
+    }
+    &.level11 {
+      width: 32%;
+      height: 530px;
+    }
+    &.level12 {
+      width: 33%;
+      height: 550px;
+    }
+    &.level13 {
+      width: 34%;
+      height: 570px;
+    }
+    &.level14 {
+      width: 50%;
+      height: 610px;
+    }
+    &.level15 {
+      width: 50%;
+      height: 610px;
+      width: 60%;
+      height: 630px;
+    }
+    &.level16 {
+      width: 60%;
+      height: 630px;
+      width: 75%;
+      height: 700px;
+    }
+    &.level17 {
+      width: 100%;
+      height: 830px;
+    }
+    &.level18 {
+      width: 100%;
+      height: 830px;
+    }
+    &.level19 {
+    }
+  }
+}

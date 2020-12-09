@@ -4,10 +4,11 @@
   word-break: keep-all;
 
   .content1 {
-    animation: upto 1.5s 1;
-  }
-  .content2 {
-    animation: upto 1.5s 1;
+    height: 200px;
+    animation: upto 1.5s infinite;
+    span {
+      display: inline-block;
+    }
   }
 }
 

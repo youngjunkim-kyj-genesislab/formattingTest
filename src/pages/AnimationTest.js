@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Button from '../component/Button/Button';
 import LogoHover from '../component/LogoHover/LogoHover';
+import Scroll from '../component/Scroll/Scroll';
 import StepShow from '../component/StepShow/StepShow';
 import UnderBar from '../component/UnderBar/UnderBar';
 import UnderBar2 from '../component/UnderBar/UnderBar2';
@@ -31,6 +32,9 @@ const AnimationTest = () => {
       <hr />
       <h3>순차적으로 등장</h3>
       <StepShow />
+      <hr />
+      <h3>스크롤 이벤트</h3>
+      <Scroll />
     </div>
   );
 };

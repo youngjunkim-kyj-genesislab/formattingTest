@@ -1,29 +1,34 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
+import { lorem } from '../../util';
 import './index.scss';
 
 const UpTo = () => {
-  const txtRef = useRef();
+  const txtRef = useRef([]);
+  const splitText = () => {
+    const spltedText = lorem.split(' ');
+    let textArr = [];
+    for (let i = 0; i < spltedText.length * 2; i++) {
+      textArr.push(
+        i % 2 === 0 ? (
+          <span className='br'>&nbsp;</span>
+        ) : (
+          <span ref={txtRef} className={'txt ' + i}>
+            {spltedText[i]}
+          </span>
+        )
+      );
+    }
+    return textArr;
+  };
+  useEffect(() => {
+    // console.log(txtRef.current.style);
+  }, []);
+
   return (
-    <div ref={txtRef} className='upto-container'>
-      <div className='content1'>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-        been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-        galley of type and scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-        passages, and more recently with desktop publishing software like Aldus PageMaker including
-        versions of Lorem Ipsum.
-      </div>
-      <br />
-      <div className='content2'>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-        been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-        galley of type and scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-        passages, and more recently with desktop publishing software like Aldus PageMaker including
-        versions of Lorem Ipsum.
-      </div>
+    <div className='upto-container'>
+      {/* <div className='content1'>{splitText()}</div> */}
+      {/* <br /> */}
+      <div className='content1'>{lorem}</div>
     </div>
   );
 };
