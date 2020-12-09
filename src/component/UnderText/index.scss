@@ -1,0 +1,27 @@
+.under-text-container {
+  height: 64px;
+  overflow: hidden;
+  width: 200px;
+  background-color: #b7babe;
+  span {
+    color: #000;
+    display: block;
+    text-align: center;
+    font: normal normal 700 16px/4em Arial, sans-serif;
+    // property 순서 : font-style, font-varient, font-weight, font-size/line-height, font-family
+  }
+  .up {
+    transition: 0.3s;
+    margin-top: 0em;
+  }
+  .down {
+    color: #fff;
+  }
+  &:hover {
+    .up {
+      margin-top: -4em;
+    }
+  }
+}
+
+// up 이 margin-top 3em 으로 되어있다가 under-text-container 가 hover 되었을 때, up이 margin-top :-4em 이 적용되어 위로 올라가게됨.

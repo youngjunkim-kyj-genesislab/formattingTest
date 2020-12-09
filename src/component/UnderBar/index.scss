@@ -1,0 +1,21 @@
+.under-bar-container {
+  display: inline-block;
+  padding: 0 5px;
+  &::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    margin-top: 5px;
+  }
+  &:hover {
+    cursor: pointer;
+
+    &::after {
+      width: 100%;
+      transform-origin: left;
+    }
+  }
+}

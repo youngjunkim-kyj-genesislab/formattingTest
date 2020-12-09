@@ -1,0 +1,21 @@
+.logo-hover-container {
+  .mouse {
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+    background-color: grey;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    color: white;
+    line-height: 35px;
+    &.display {
+      opacity: 1;
+    }
+  }
+  img {
+    padding: 20px;
+    border: 1px solid #000;
+    cursor: pointer;
+  }
+}

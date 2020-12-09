@@ -1,0 +1,23 @@
+.upto-container {
+  margin: 0 auto;
+  width: 500px;
+  word-break: keep-all;
+
+  .content1 {
+    animation: upto 1.5s 1;
+  }
+  .content2 {
+    animation: upto 1.5s 1;
+  }
+}
+
+@keyframes upto {
+  0% {
+    opacity: 0;
+    padding-top: 30px;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
