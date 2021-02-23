@@ -21,6 +21,7 @@ const Scroll = () => {
     setBottomLocation(location.bottom);
     setTargetTop(location.targetTopLocation);
   };
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -47,22 +48,30 @@ const Scroll = () => {
       return full;
     }
   };
+
   const style = {
     backgroundImage: `url(${getWhichImg(level)})`,
   };
+
   let loremTest = () => {
     let arr = [];
     for (let i = 0; i < 10; i++) {
-      arr.push(lorem);
+      arr.push(
+        <h3>
+          {lorem}
+          <br />
+        </h3>
+      );
     }
     return arr;
   };
+
   return (
     <>
       <div ref={scrollRef} className={`scroll-container ${recog}`}>
         <div className={`part-img ${levelText}`} style={style} alt='part' />
       </div>
-      {loremTest()}
+      <div className='text'>{loremTest()}</div>
     </>
   );
 };

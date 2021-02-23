@@ -1,0 +1,36 @@
+.new-scroll-container {
+  background-color: #000;
+  overflow: hidden;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1530px;
+    padding: 190px 100px;
+
+    .section {
+      position: relative;
+      width: calc(50% - 30px);
+      &.left {
+      }
+      &.right {
+      }
+
+      .case-img {
+        position: relative;
+        border: 8px solid #fff;
+        border-radius: 27px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        transform: translate3d(0px, -350px, 0px);
+        transition: all 0.25s linear;
+        > img {
+          width: 100%;
+        }
+      }
+    }
+    .right-section {
+      position: relative;
+      width: calc(50% - 30px);
+    }
+  }
+}

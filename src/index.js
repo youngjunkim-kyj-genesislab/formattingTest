@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import dotenv from 'dotenv';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -9,6 +10,8 @@ import { createStore } from 'redux';
 import rootReducer from './redux';
 
 const store = createStore(rootReducer, composeWithDevTools());
+const envResult = dotenv.config();
+// console.log(envResult);
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Button from '../component/Button/Button';
 import LogoHover from '../component/LogoHover/LogoHover';
+import NewScroll from '../component/NewScroll';
+import PagePercent from '../component/pagePercent';
 import Scroll from '../component/Scroll/Scroll';
 import StepShow from '../component/StepShow/StepShow';
 import UnderBar from '../component/UnderBar/UnderBar';
@@ -12,8 +14,8 @@ import './index.scss';
 const AnimationTest = () => {
   return (
     <div className='animation'>
+      <PagePercent />
       <h1>애니메이션 연습</h1>
-      {/* <div className='view'>큰 뷰</div> */}
       <h3>버튼 hover</h3>
       <Button />
       <hr />
@@ -32,6 +34,11 @@ const AnimationTest = () => {
       <hr />
       <h3>순차적으로 등장</h3>
       <StepShow />
+      <hr />
+      <h3>스크롤 이벤트</h3>
+      <Scroll />
+      <NewScroll />
+
       <hr />
       <h3>스크롤 이벤트</h3>
       <Scroll />

@@ -1,0 +1,24 @@
+.sound-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  visibility: hidden;
+  &.all,
+  &.audio {
+    visibility: visible;
+  }
+  .bar {
+    width: 5px;
+    height: 16px;
+    border-radius: 5px;
+    background-color: black;
+    margin-right: 5px;
+    &:last-child {
+      margin-right: 0px;
+    }
+    &.selected {
+      background-color: lightcoral;
+    }
+  }
+}

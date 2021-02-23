@@ -1,0 +1,73 @@
+.video-sutdy-container {
+  background-color: ivory;
+  button {
+    margin: 10px 20px;
+  }
+  .btn-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .sub-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+    &.video,
+    &.all {
+      visibility: visible;
+    }
+  }
+  .control {
+    display: flex;
+    justify-content: center;
+    .rec {
+      width: 40%;
+    }
+    .rec-stop {
+      width: 40%;
+    }
+  }
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+    video {
+      width: 100%;
+      height: 100%;
+      background-color: #000000;
+      object-fit: contain;
+      transform: scaleX(-1);
+    }
+    .after-rec {
+      transform: scaleX(1);
+    }
+    .masking-div {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #14213d;
+      opacity: 0.97;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 56px;
+      visibility: hidden;
+      &.video,
+      &.all {
+        visibility: visible;
+      }
+      &.false {
+        display: none;
+      }
+    }
+  }
+  .btm-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

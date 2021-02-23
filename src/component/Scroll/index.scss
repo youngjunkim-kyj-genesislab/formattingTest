@@ -14,6 +14,21 @@
     background-color: #fff;
     background-repeat: no-repeat;
     transition: all 0.5s ease-in-out;
+    z-index: -1;
+    // TODO : z-index 제거해도 됨.
+
+    // for i in 10 {
+    //   &.level{i} {
+    //     opacity: 0.1 * i
+    //   }
+    // }
+    // for i in 10 {
+    //   &.level{10+i} {
+    //     width: {30+i}%
+    //     (10 - i) * height
+    //   }
+    // }
+
     &.level0 {
       opacity: 0.1;
     }
@@ -65,26 +80,32 @@
       height: 610px;
     }
     &.level15 {
-      width: 50%;
-      height: 610px;
       width: 60%;
       height: 630px;
     }
     &.level16 {
-      width: 60%;
-      height: 630px;
       width: 75%;
       height: 700px;
     }
     &.level17 {
       width: 100%;
       height: 830px;
+      // TODO : 아래 삭제해도됨.
+      position: fixed;
+      top: 50px;
     }
     &.level18 {
       width: 100%;
       height: 830px;
+      // TODO : 아래 삭제해도됨.
+      position: fixed;
+      top: 50px;
     }
     &.level19 {
     }
   }
+}
+
+.text {
+  background-color: #fff;
 }
