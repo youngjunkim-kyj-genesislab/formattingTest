@@ -8,6 +8,7 @@ import RouteTest from './component/route-test';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import PathTest from './component/path-test';
 import VideoStudy from './pages/video-study/video-study';
+import SagaTest from './pages/sagaTest';
 
 function App() {
   // console.log('??');
@@ -23,7 +24,8 @@ function App() {
         <Route path='/animation' component={AnimationTest} />
         {/* <Carousel /> */}
         <Route path='/video-study' component={VideoStudy} />
-        <Route path='/' component={PathTest} />
+        <Route path='/' component={SagaTest} />
+        <Route path='/path' component={PathTest} />
       </Switch>
     </Router>
   );

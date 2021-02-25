@@ -21,7 +21,7 @@ const VideoStudy = () => {
   const dispatch = useDispatch();
   const videoRef = useRef();
   const afterVideoRef = useRef();
-  const video = useSelector((state) => state.videoReducer);
+  const { video } = useSelector((state) => state.videoReducer);
 
   const checkVideo = async () => {
     const videoInputCount = await getConnectedDevices('videoinput');
@@ -143,7 +143,7 @@ const VideoStudy = () => {
 
   useEffect(() => {
     if (recDone && afterVideoRef) {
-      afterVideoRef.current.src = URL.createObjectURL(video.video);
+      afterVideoRef.current.src = URL.createObjectURL(video);
       afterVideoRef.current.srcObject = null;
     }
   }, [recDone]);
