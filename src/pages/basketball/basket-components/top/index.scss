@@ -1,0 +1,22 @@
+.top-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 24px;
+  .name-input {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    max-width: 350px;
+    width: 100%;
+  }
+  .btn-div {
+    display: flex;
+    flex-direction: column;
+    button {
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

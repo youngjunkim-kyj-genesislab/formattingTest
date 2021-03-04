@@ -1,0 +1,13 @@
+.score-container {
+  display: flex;
+  .score-num {
+    font-size: 500px;
+  }
+  .foul-num {
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    font-size: 100px;
+    color: orangered;
+  }
+}

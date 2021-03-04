@@ -113,3 +113,10 @@ export const createAudioMeter = (
 
   return processor;
 };
+
+export const makeHtmlCode = () => {
+  return `<html>
+      <style>{{bodyStyle}}</style>
+      <body> {{bodyContent}} </body>
+    </html>`;
+};

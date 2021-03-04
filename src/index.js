@@ -9,6 +9,7 @@ import { createHashHistory as createHistory } from 'history';
 import createSagaMiddleware from 'redux-saga';
 import { routerMiddleware } from 'react-router-redux';
 import rootSaga from './sagas';
+import logger from 'redux-logger';
 import './index.css';
 
 export const history = createHistory();
@@ -17,8 +18,19 @@ const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(
   rootReducer,
-  composeWithDevTools(applyMiddleware(sagaMiddleware, routeMiddleware))
+  composeWithDevTools(
+    applyMiddleware(
+      sagaMiddleware,
+      routeMiddleware
+
+      // logger
+    )
+  )
 );
+
+export const getState = () => {
+  return store.getState();
+};
 sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(

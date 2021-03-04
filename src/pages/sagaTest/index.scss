@@ -1,2 +1,57 @@
-.saga-test-container {
+.page-wrapper {
+  position: relative;
+  .saga-test-container {
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ebecf0;
+    .title {
+      margin-bottom: 10px;
+      font-size: 24px;
+      font-weight: bold;
+      color: rgb(23, 43, 77);
+      height: 40px;
+      border-bottom: 1px solid black;
+    }
+    .input-wrapper {
+      margin: 10px auto;
+      .input-text {
+        margin-right: 5px;
+        &:focus {
+          outline: none;
+        }
+      }
+      button {
+        background-color: rgb(23, 43, 77);
+        color: #fff;
+        border: unset;
+        border-radius: 5px;
+        padding: 3px 6px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .list-wrapper {
+      margin: 5px auto;
+      .todo-title {
+        font-weight: bold;
+        &.line {
+          text-decoration: line-through;
+          font-weight: normal;
+        }
+      }
+    }
+    .pic-container {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+
+      .img {
+        margin-top: 10px;
+        max-width: 500px;
+        width: 100%;
+      }
+    }
+  }
 }

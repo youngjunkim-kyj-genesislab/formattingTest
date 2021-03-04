@@ -1,0 +1,21 @@
+.middle-container {
+  display: flex;
+  justify-content: space-around;
+  .team {
+    .score {
+      font-size: 500px;
+    }
+  }
+  .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .total-timer {
+      font-size: 120px;
+    }
+    .shot-clock {
+      font-size: 80px;
+    }
+  }
+}
