@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setVideo } from '../../redux/video';
 var mediaStream = null;
 var recorder = null;
-
+var imageCapture;
 const getConnectedDevices = async (deviceType) => {
   const devices = await navigator.mediaDevices.enumerateDevices();
   return devices.filter((device) => device.kind === deviceType);
@@ -20,6 +20,7 @@ const VideoStudy = () => {
   const [isMobile, setIsMobile] = useState(false);
   const dispatch = useDispatch();
   const videoRef = useRef();
+  const imgRef = useRef();
   const afterVideoRef = useRef();
   const { video } = useSelector((state) => state.videoReducer);
 
@@ -63,9 +64,13 @@ const VideoStudy = () => {
           alert('false');
         }
       }
-
       mediaStream = await navigator.mediaDevices.getUserMedia(getConstraint(type));
 
+      navigator.mediaDevices.getUserMedia(getConstraint(type)).then((res) => {
+        const track = res.getVideoTracks()[0];
+        imageCapture = new ImageCapture(track);
+      });
+      console.log(mediaStream);
       // alert(mediaStream);
       playVideoAfterLoading(mediaStream);
     } catch (err) {
@@ -148,6 +153,13 @@ const VideoStudy = () => {
     }
   }, [recDone]);
 
+  function takePhoto() {
+    imageCapture.takePhoto().then((blob) => {
+      console.log(blob);
+      imgRef.current.src = URL.createObjectURL(blob);
+    });
+  }
+
   return (
     <div className='video-sutdy-container'>
       <div className='btn-wrapper'>
@@ -171,6 +183,7 @@ const VideoStudy = () => {
         <button className='rec-stop' onClick={stopRecording}>
           중지
         </button>
+        <button onClick={takePhoto}>캡쳐</button>
       </div>
 
       <div className='video-wrapper'>
@@ -179,7 +192,11 @@ const VideoStudy = () => {
         ) : (
           <video ref={videoRef} />
         )}
+
         <div className={`masking-div ${type} ${masking}`}>Masking</div>
+      </div>
+      <div style={{ textAlign: 'center' }}>
+        <img ref={imgRef} className='capture-img' />
       </div>
       <div className='btm-wrapper'>
         {recDone ? <button>초기화</button> : <SoundBar type={type} />}

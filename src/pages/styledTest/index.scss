@@ -1,0 +1,48 @@
+.styled-test {
+  margin: 50px;
+  .bar {
+    width: 200px;
+    height: 10px;
+    // border: 1px solid #000;
+    background: linear-gradient(
+      90deg,
+      #ff3434 0%,
+      #ff9736 12.14%,
+      #ffd233 22.69%,
+      #f0ff49 35.36%,
+      #aeff47 49.08%,
+      #3eff3a 58.58%,
+      #3eff97 66.5%,
+      #52fff5 74.42%,
+      #3fbaff 83.39%,
+      #0029ff 88.14%,
+      #6732ff 91.83%,
+      #d633ff 101.32%,
+      #cc00ff 101.33%
+    );
+    border-radius: 100px;
+  }
+  .graph-wrapper {
+    width: 500px;
+    .graph {
+      display: inline-flex;
+      justify-content: space-around;
+      width: 150px;
+      .graph-bar-container {
+        position: relative;
+        display: flex;
+        justify-content: left;
+        width: 100px;
+        .graph-bar {
+          transform: rotate(270deg);
+        }
+      }
+    }
+  }
+  .box {
+    width: 100px;
+    background-color: #ffd233;
+    display: inline-block;
+    margin-right: 10px;
+  }
+}

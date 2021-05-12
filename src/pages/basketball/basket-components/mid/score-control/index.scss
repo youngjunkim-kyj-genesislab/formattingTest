@@ -1,0 +1,9 @@
+.count-btn-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  .count-btn {
+    width: 80px;
+    height: 50px;
+  }
+}

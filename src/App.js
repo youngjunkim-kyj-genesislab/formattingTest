@@ -11,11 +11,12 @@ import VideoStudy from './pages/video-study/video-study';
 import SagaTest from './pages/sagaTest';
 import BasketBall from './pages/basketball';
 import HtmlTest from './pages/htmlTest';
+import PdfTest from './pages/pdfTest';
+import ChartTest from './pages/chartTest';
+import StyledTest from './pages/styledTest';
+import Empty from './pages/empty';
 
 function App() {
-  // console.log('??');
-
-  // console.log(process.env);
   return (
     <Router>
       <Switch>
@@ -23,13 +24,17 @@ function App() {
         {/* <hr /> */}
         {/* <MaterialTest /> */}
         {/* <hr /> */}
-        <Route path='/' component={AnimationTest} />
+        <Route path='/animation' component={AnimationTest} />
         {/* <Carousel /> */}
         <Route path='/video-study' component={VideoStudy} />
         <Route path='/saga' component={SagaTest} />
         <Route path='/path' component={PathTest} />
         {/* <Route path='/' component={BasketBall} /> */}
+        <Route path='/chart' component={ChartTest} />
+        <Route path='/style' component={StyledTest} />
         {/* <Route path='/' component={HtmlTest} /> */}
+        {/* <Route path='/pdf' component={PdfTest} /> */}
+        <Route path='/' component={Empty} />
       </Switch>
     </Router>
   );

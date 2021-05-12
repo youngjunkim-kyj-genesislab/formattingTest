@@ -1,13 +1,35 @@
 .score-container {
   display: flex;
+  width: 565px;
   .score-num {
-    font-size: 500px;
+    font-size: 450px;
+    min-width: 600px;
+    text-align: center;
+    // &.teamA {
+    //   text-align: left;
+    // }
+    // &.teamB {
+    //   text-align: right;
+    // }
   }
   .foul-num {
     display: flex;
     align-items: flex-end;
-    text-align: center;
     font-size: 100px;
     color: orangered;
+    .foul-num-div {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      .up {
+        font-size: 10px;
+      }
+      .down {
+        font-size: 10px;
+        transform: scaleY(-1);
+      }
+      .num {
+      }
+    }
   }
 }

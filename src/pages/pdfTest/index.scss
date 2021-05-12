@@ -1,0 +1,56 @@
+.pdf-container {
+  .test-div {
+    background-color: #dbb3da;
+    height: 150px;
+    border-bottom: 1px solid #000;
+    &.one {
+      background-color: palegoldenrod;
+      //   page-break-after: always;
+    }
+    &.two {
+      background-color: palegreen;
+      page-break-before: always;
+    }
+    &.three {
+      background-color: orangered;
+    }
+    &.four {
+      background-color: orange;
+      page-break-before: always;
+    }
+    &.five {
+      background-color: paleturquoise;
+    }
+    &.six {
+      background-color: peru;
+    }
+    &.seven {
+      background-color: #000;
+    }
+    &.eight {
+      background-color: rebeccapurple;
+    }
+    &.nine {
+      background-color: royalblue;
+    }
+    &.ten {
+      background-color: saddlebrown;
+      page-break-inside: avoid;
+    }
+  }
+}
+
+@page {
+  size: 21cm 29.7cm; // A4
+  margin: 2cm;
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .pdf-container {
+    .test-div {
+      &.one {
+      }
+    }
+  }
+}

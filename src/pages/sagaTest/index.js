@@ -45,6 +45,10 @@ const SagaTest = () => {
     inputRef.current.focus();
   }, []);
 
+  const onClickButton = (...arg) => {
+    console.log(arg);
+  };
+
   return (
     <div className='page-wrapper'>
       <div className='saga-test-container'>
@@ -79,6 +83,10 @@ const SagaTest = () => {
           </div>
           {imgUrl && <img className='img' alt='??' src={imgUrl} />}
         </div>
+      </div>
+      <div>
+        hi
+        <button onClick={() => onClickButton(1, 2, 3)}>클릭</button>
       </div>
     </div>
   );
