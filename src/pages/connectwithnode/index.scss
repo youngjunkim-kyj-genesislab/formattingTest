@@ -1,0 +1,36 @@
+.user-list-card {
+  padding: 30px;
+  .user-wrapper {
+    display: flex;
+    margin-bottom: 10px;
+    cursor: pointer;
+    .user-name {
+      width: 150px;
+    }
+    .user-age {
+      width: 100px;
+    }
+    .user-married {
+      width: 50px;
+    }
+    &:hover {
+      background-color: #dbdbdb;
+    }
+  }
+  .comment-wrapper {
+    display: flex;
+    margin-bottom: 10px;
+    .user-name {
+      width: 150px;
+    }
+    .user-comment {
+      width: 500px;
+    }
+    .comment-date {
+      width: 100px;
+    }
+  }
+  .comment-input {
+    width: 250px;
+  }
+}

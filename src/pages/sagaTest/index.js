@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addTodoList, getImg, todoCheckChange } from '../../redux/todo';
 import './index.scss';
-const SagaTest = () => {
+const SagaTest = (props) => {
   const [todo, setTodo] = useState('');
   const inputRef = useRef();
   const dispatch = useDispatch();
@@ -37,7 +37,7 @@ const SagaTest = () => {
   useEffect(() => {
     inputRef.current.addEventListener('keydown', inputKeyEnter);
     return () => {
-      inputRef.current.removeEventListener('keydown', inputKeyEnter);
+      inputRef?.current?.removeEventListener('keydown', inputKeyEnter);
     };
   }, [todo]);
 
@@ -79,6 +79,7 @@ const SagaTest = () => {
 
         <div className='pic-container'>
           <div>
+            <button onClick={() => props.history.push('/animation')}>페이지 이동</button>
             <button onClick={imgGetBtnClick}>이미지 GET</button>
           </div>
           {imgUrl && <img className='img' alt='??' src={imgUrl} />}

@@ -7,6 +7,9 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.21.1",
+    "caniuse-lite": "^1.0.30001228",
+    "date-fns": "^2.21.3",
     "dotenv": "^8.2.0",
     "highcharts": "^9.0.1",
     "highcharts-react-official": "^3.0.0",
@@ -35,7 +38,11 @@
     "start:prod": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "syncs3:prod": "aws s3 sync ./build s3://youngjunkim-etc/",
+    "syncs3:test": "aws s3 ls s3://youngjunkim-etc",
+    "invalidate:prod": "aws cloudfront create-invalidation --distribution-id EXB4RZ9VPHNKD --paths  \"/*\"",
+    "upload:prod": "yarn build && yarn syncs3:prod && yarn invalidate:prod"
   },
   "eslintConfig": {
     "extends": [

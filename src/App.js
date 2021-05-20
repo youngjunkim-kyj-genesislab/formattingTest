@@ -15,6 +15,7 @@ import PdfTest from './pages/pdfTest';
 import ChartTest from './pages/chartTest';
 import StyledTest from './pages/styledTest';
 import Empty from './pages/empty';
+import ConnnectTest from './pages/connectwithnode';
 
 function App() {
   return (
@@ -34,7 +35,8 @@ function App() {
         <Route path='/style' component={StyledTest} />
         {/* <Route path='/' component={HtmlTest} /> */}
         {/* <Route path='/pdf' component={PdfTest} /> */}
-        <Route path='/' component={Empty} />
+        <Route path='/nodejs' component={ConnnectTest} />
+        <Route exact path='/' component={SagaTest} />
       </Switch>
     </Router>
   );
